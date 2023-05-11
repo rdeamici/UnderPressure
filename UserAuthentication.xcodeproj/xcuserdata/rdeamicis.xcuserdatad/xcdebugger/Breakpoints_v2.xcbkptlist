@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2F53306F-871A-4331-B773-6EA1BFFC6FEA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "HandwritingSampleModelController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC - adb33b510237de8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleModelController.init() -&gt; UserAuthentication.HandwritingSampleModelController"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC - adb33b510237de8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleModelController.init() -&gt; UserAuthentication.HandwritingSampleModelController"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B03A396-EB84-4B94-A4B2-B231C80DDEAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "resetForm()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5116B27-F7A2-4EFC-AB72-6837219385B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "navigateToQuestionnaire()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
