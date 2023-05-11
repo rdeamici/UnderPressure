@@ -19,7 +19,7 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
     var handwritingSampleModelController = HandwritingSampleModelController()
     weak var canvasViewDelegate: PKCanvasViewDelegate?
     
-    var targetIndex = 0
+    var firstTarget = true
     var targets = [
         "melancholy",
         "Hello World",
@@ -37,11 +37,21 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
         validateForm()
     }
 
-    
+    func navigateToQuestionnaire() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let questionnaireViewController = storyboard.instantiateViewController(withIdentifier: "questionnaireController") as! QuestionnaireViewController
+        
+        questionnaireViewController.loadViewIfNeeded()
+        questionnaireViewController.setup(username: self.nameTF.text!)
+        self.present(questionnaireViewController, animated: true, completion: nil)
+    }
     
     func resetForm() {
         canvasView.drawing = PKDrawing()
         saveBtn.isEnabled = false
+        if targets.isEmpty {
+            navigateToQuestionnaire()
+        }
     }
     
     func validateForm() {
@@ -60,7 +70,7 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
     }
 
     @IBAction func nameChanged(_ sender: UITextField) {
-        if targetIndex == 0 {
+        if firstTarget {
             targetToWrite.text = nameTF.text
         }
         validateForm()
@@ -70,6 +80,9 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
         handwritingSampleModelController.drawing = canvasView.drawing
         handwritingSampleModelController.name = nameTF.text!
         handwritingSampleModelController.saveDrawing()
+        if firstTarget {
+            firstTarget = false
+        }
         targetToWrite.text = targets.popLast()
         
         resetForm()
