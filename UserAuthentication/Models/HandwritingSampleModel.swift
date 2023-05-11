@@ -10,17 +10,17 @@ import PencilKit
 
 struct HandwritingSampleModel: Codable {
     var drawerName = "Rick"
-    var targetWord = "Rick"    
-    var duration = 1.02
+    var targetToDraw = "Rick"
+    var duration: TimeInterval = 1.02
     var drawing = PKDrawing()
 }
 
 #if DEBUG
 extension HandwritingSampleModel {
     static var sampleData = [
-        HandwritingSampleModel(drawerName: "Rick", targetWord: "brown", duration: 1.02),
-        HandwritingSampleModel(drawerName: "Elina", targetWord: "brown", duration: 1.02),
-        HandwritingSampleModel(drawerName: "Zane", targetWord: "brown", duration: 1.02),
+        HandwritingSampleModel(drawerName: "Rick", targetToDraw: "brown", duration: 1.02),
+        HandwritingSampleModel(drawerName: "Elina", targetToDraw: "brown", duration: 1.02),
+        HandwritingSampleModel(drawerName: "Zane", targetToDraw: "brown", duration: 1.02),
     ]
 }
 #endif

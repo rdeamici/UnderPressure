@@ -9,63 +9,71 @@ import UIKit
 import PencilKit
 import os
 
-class HandwritingSampleViewController: UIViewController {
-    @IBOutlet var canvasView: PKCanvasView!
-    @IBOutlet var saveButton: UIButton!
-    var handwritingSampleModel = HandwritingSampleModel()
+class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PKCanvasViewDelegate {
     
-    private var saveURL: URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths.first!
-        return documentsDirectory.appending(path: "UserAuthentication.data")
-    }
-
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var canvasView: PKCanvasView!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var targetToWrite: UILabel!
+    
+    var handwritingSampleModelController = HandwritingSampleModelController()
+    weak var canvasViewDelegate: PKCanvasViewDelegate?
+    
+    var targetIndex = 0
+    var targets = [
+        "melancholy",
+        "Hello World",
+        "The quick brown fox jumped over the lazy dog"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        canvasView = PKCanvasView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-        canvasView.backgroundColor = UIColor.gray
         canvasView.drawingPolicy = .anyInput
-        view.addSubview(canvasView)
-//        canvasView.drawingPolicy = .pencilOnly
-
-        saveButton = UIButton(type: .system)
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.addTarget(self, action: #selector(saveDrawing), for: .touchUpInside)
-        view.addSubview(saveButton)
-        
-        canvasView.translatesAutoresizingMaskIntoConstraints = false
-        saveButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            canvasView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            canvasView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            canvasView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            canvasView.heightAnchor.constraint(equalToConstant: 200),
-            saveButton.topAnchor.constraint(equalTo: canvasView.bottomAnchor, constant: 20),
-            saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
+        canvasView.delegate = self
+        resetForm()
     }
-        
-    @objc func saveDrawing() {
-        var savingModel = handwritingSampleModel
-        savingModel.drawing = canvasView.drawing
+    
+    func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+        validateForm()
+    }
 
-        let url = saveURL
-        do {
-            let encoder = PropertyListEncoder()
-            let data = try encoder.encode(savingModel)
-            try data.write(to: url)
-            self.clearHandwriting()
-        } catch {
-            os_log("Could not save HandwritingSampleModel: %s",
-                    type: .error,
-                    error.localizedDescription)
+    
+    
+    func resetForm() {
+        canvasView.drawing = PKDrawing()
+        saveBtn.isEnabled = false
+    }
+    
+    func validateForm() {
+        if let name = nameTF.text {
+            saveBtn.isEnabled = !(canvasView.drawing.strokes.isEmpty || name.isEmpty)
         }
         
     }
     
-    func clearHandwriting() {
-        canvasView.drawing = PKDrawing()
+    func displaySaveSuccessfulALert() {
+        let alert = UIAlertController(title: "Sample Saved", message: "Your handwriting sample was successfully saved.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    @IBAction func nameChanged(_ sender: UITextField) {
+        if targetIndex == 0 {
+            targetToWrite.text = nameTF.text
+        }
+        validateForm()
+    }
+        
+    @IBAction func saveHandritingSample(_ sender: Any) {
+        handwritingSampleModelController.drawing = canvasView.drawing
+        handwritingSampleModelController.name = nameTF.text!
+        handwritingSampleModelController.saveDrawing()
+        targetToWrite.text = targets.popLast()
+        
+        resetForm()
+        displaySaveSuccessfulALert()
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6302A9CF2A0B354E007C1D20 /* HandwritingSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302A9CE2A0B354E007C1D20 /* HandwritingSampleModel.swift */; };
+		6302A9D42A0C1B86007C1D20 /* HandwritingSampleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302A9D32A0C1B85007C1D20 /* HandwritingSampleModelController.swift */; };
 		635BB9552A07154400344D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9542A07154400344D53 /* AppDelegate.swift */; };
 		635BB9572A07154400344D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9562A07154400344D53 /* SceneDelegate.swift */; };
 		635BB9592A07154400344D53 /* HandritingSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9582A07154400344D53 /* HandritingSampleViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		6302A9CE2A0B354E007C1D20 /* HandwritingSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwritingSampleModel.swift; sourceTree = "<group>"; };
+		6302A9D32A0C1B85007C1D20 /* HandwritingSampleModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwritingSampleModelController.swift; sourceTree = "<group>"; };
 		635BB9512A07154400344D53 /* UserAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635BB9542A07154400344D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635BB9562A07154400344D53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		6302A9D22A0B612A007C1D20 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6302A9D32A0C1B85007C1D20 /* HandwritingSampleModelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				635BB9592A07154400344D53 /* HandritingSampleViewController.swift in Sources */,
 				635BB9552A07154400344D53 /* AppDelegate.swift in Sources */,
 				635BB9572A07154400344D53 /* SceneDelegate.swift in Sources */,
+				6302A9D42A0C1B86007C1D20 /* HandwritingSampleModelController.swift in Sources */,
 				6302A9CF2A0B354E007C1D20 /* HandwritingSampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
