@@ -7,47 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC"
-            shouldBeEnabled = "Yes"
+            uuid = "EB060A41-9B12-4A24-AD22-CA66DE301711"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "HandwritingSampleModelController"
-            landmarkType = "3">
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "saveHandritingSample(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC - adb33b510237de8f"
+                  uuid = "EB060A41-9B12-4A24-AD22-CA66DE301711 - 429ae076df63d760"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UserAuthentication.HandwritingSampleModelController.init() -&gt; UserAuthentication.HandwritingSampleModelController"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.saveHandritingSample(Any) -&gt; ()"
                   moduleName = "UserAuthentication"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "1232">
                </Location>
                <Location
-                  uuid = "60F7F5F6-1346-4A9F-A9B0-74E933EB77CC - adb33b510237de8f"
+                  uuid = "EB060A41-9B12-4A24-AD22-CA66DE301711 - 429ae076df63d760"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UserAuthentication.HandwritingSampleModelController.init() -&gt; UserAuthentication.HandwritingSampleModelController"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.saveHandritingSample(Any) -&gt; ()"
                   moduleName = "UserAuthentication"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "232">
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "1204">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,33 +55,529 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B03A396-EB84-4B94-A4B2-B231C80DDEAD"
+            uuid = "B2C7212B-F918-4052-B844-A7D896EFA19E"
             shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2C7212B-F918-4052-B844-A7D896EFA19E - 72da26103886ef84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1696">
+               </Location>
+               <Location
+                  uuid = "B2C7212B-F918-4052-B844-A7D896EFA19E - 72da26103886ef84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE4DC7AD-0942-4187-AB3D-E309EF6EAA7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE4DC7AD-0942-4187-AB3D-E309EF6EAA7E - 72da26103886ea8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "6320">
+               </Location>
+               <Location
+                  uuid = "BE4DC7AD-0942-4187-AB3D-E309EF6EAA7E - 72da26103886ea8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "6248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87D531FC-048E-4FCF-A940-EF78E8F97184"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "87D531FC-048E-4FCF-A940-EF78E8F97184 - 72da26103886e9d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "5948">
+               </Location>
+               <Location
+                  uuid = "87D531FC-048E-4FCF-A940-EF78E8F97184 - 72da26103886e9d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "5576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC29E1A7-4BB0-40B0-8E10-D6268E0532C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC29E1A7-4BB0-40B0-8E10-D6268E0532C9 - 72da26103886e995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "5776">
+               </Location>
+               <Location
+                  uuid = "CC29E1A7-4BB0-40B0-8E10-D6268E0532C9 - 72da26103886e995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "5528">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "253ACDE9-4FC6-4B91-8E19-2F0232858FCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "253ACDE9-4FC6-4B91-8E19-2F0232858FCE - 72da26103886e911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "6248">
+               </Location>
+               <Location
+                  uuid = "253ACDE9-4FC6-4B91-8E19-2F0232858FCE - 72da26103886e911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "5776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53A35375-AE67-4A26-8644-82368064AC9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "saveDrawingsToLocalDisc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53A35375-AE67-4A26-8644-82368064AC9B - 72da26103886e94f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "6388">
+               </Location>
+               <Location
+                  uuid = "53A35375-AE67-4A26-8644-82368064AC9B - 72da26103886e94f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.saveDrawingsToLocalDisc() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "5948">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C782D5C4-D162-44AE-A7FB-0533D87774B5"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "resetForm()"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "canvasViewDrawingDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C782D5C4-D162-44AE-A7FB-0533D87774B5 - 258789ae52837307"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.canvasViewDrawingDidChange(__C.PKCanvasView) -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "C782D5C4-D162-44AE-A7FB-0533D87774B5 - 258789ae52837307"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.canvasViewDrawingDidChange(__C.PKCanvasView) -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C93E9CF-BEE4-4ADF-BC2A-1DBB902080C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C5116B27-F7A2-4EFC-AB72-6837219385B1"
+            uuid = "C113A62C-FDD4-4E6C-AF54-5265BB03E994"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "textFieldShouldReturn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2387BB2-00F7-401E-817A-21D43ACB1833"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "saveHandritingSample(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A4C1E74-905A-4FC4-84E2-07513634788F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "canvasViewDrawingDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3A4C1E74-905A-4FC4-84E2-07513634788F - 258789ae52830ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.canvasViewDrawingDidChange(__C.PKCanvasView) -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "3A4C1E74-905A-4FC4-84E2-07513634788F - 258789ae52830ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.canvasViewDrawingDidChange(__C.PKCanvasView) -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43158F5D-FB22-4ECF-910E-91E3463746E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "createURL()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "43158F5D-FB22-4ECF-910E-91E3463746E1 - b361b335762331fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.username.getter : Swift.String"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "43158F5D-FB22-4ECF-910E-91E3463746E1 - 617e1259beaae127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSamplesController.createURL() -&gt; Foundation.URL"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandwritingSampleModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51AEE2A6-FEC8-466B-A019-B8ECC8D0A07E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UserAuthentication/Controllers/HandritingSampleViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "navigateToQuestionnaire()"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "resetForm()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51AEE2A6-FEC8-466B-A019-B8ECC8D0A07E - 27d22c214f290752"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.resetForm() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "51AEE2A6-FEC8-466B-A019-B8ECC8D0A07E - 27d22c214f29076d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UserAuthentication.HandwritingSampleViewController.resetForm() -&gt; ()"
+                  moduleName = "UserAuthentication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rdeamicis/Desktop/UserAuthApp/UserAuthentication/UserAuthentication/Controllers/HandritingSampleViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1652">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
