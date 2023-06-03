@@ -5,92 +5,75 @@
 //  Created by Rick DeAmicis on 5/10/23.
 //
 
-import Foundation
 import UIKit
 import PencilKit
-import os
-
-class HandwritingSampleModelController {
-    var handwritingSampleModel: HandwritingSampleModel
-    
-    init() {
-        handwritingSampleModel = HandwritingSampleModel()
-    }
-    
-    var drawing: PKDrawing {
-        get { handwritingSampleModel.drawing }
-        set { handwritingSampleModel.drawing = newValue }
-    }
-    var targetToDraw: String {
-        get { handwritingSampleModel.targetToDraw }
-        set { handwritingSampleModel.targetToDraw = newValue }
-    }
-
-    var duration: TimeInterval {
-        get { handwritingSampleModel.duration }
-    }
-}
-
+import GoogleAPIClientForREST
+import GoogleSignIn
+import GTMSessionFetcher
 
 class HandwritingSamplesController {
-    /// Dispatch queues for the background operations done by this controller.
-    private let serializationQueue = DispatchQueue(label: "SerializationQueue", qos: .background)
-    private let handwritingSampleModelController: HandwritingSampleModelController = HandwritingSampleModelController()
-    private var handwritingSamples: HandwritingSamples = HandwritingSamples()
-    
-    func createURL() -> URL {
-        let documentName = username+".data"
-        let dirURL = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)[0]
-        let fileURL = URL(fileURLWithPath: username, relativeTo: dirURL).appendingPathExtension("data")
-
-        var saveURL: URL {
-            let paths = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
-            let documentsDirectory = paths.first!
-            return documentsDirectory.appendingPathComponent(documentName)
-        }
-
-        return fileURL
-    }
+    private var handwritingSamples = HandwritingSamples()
+    private let googleSheetsController = GoogleSheetsController()
     
     var username: String {
         get { handwritingSamples.username }
-        set { handwritingSamples.username = newValue }
-    }
-    
-    func saveDrawing(newTarget: String, newDrawing: PKDrawing) {
-        let handwritingSample = HandwritingSampleModel(targetToDraw: newTarget, drawing: newDrawing)
-        handwritingSamples.drawings.append(handwritingSample)
-    }
-    
-    func saveDrawingsToLocalDisc() {
-        let url = createURL()
-        let savingModel = handwritingSamples
-
-        print("saving handwriting samples to:")
-        print(url.absoluteString)
-        print(savingModel.username)
-        print(savingModel.drawings.count)
-        print(savingModel.drawings.first!.drawing.dataRepresentation())
-        print(savingModel.drawings.first!.drawing.bounds.size)
-        print(savingModel.drawings.first!.drawing.strokes.debugDescription)
-        print(savingModel.drawings.first!.drawing.strokes.count)
-        print(savingModel.drawings.first!.drawing.strokes.first.debugDescription)
-        print(savingModel.drawings.first!.drawing.strokes.first!.path.first.debugDescription)
-
-        do {
-            let encoder = PropertyListEncoder()
-//            encoder.outputFormat = .openStep
-            let data = try encoder.encode(savingModel)
-            if let s = String(data: data, encoding: .nextstep) {
-                print(s)
-            }
-            print(data.debugDescription)
-            print(data)
-            try data.write(to: url)
-        } catch {
-            os_log("Could not save Handwriting Samples for user %s: %s", type: .error, self.username, error.localizedDescription)
+        set { // reset data for new user
+            handwritingSamples = HandwritingSamples()
+            handwritingSamples.username = newValue
         }
     }
+        
+    func extractDynamicData(drawing: PKDrawing) -> [PKDrawingDynamicDataModel] {
+        let sampleStartTime = drawing.strokes.first!.path.creationDate.timeIntervalSince1970
+        var strokeStartTime = sampleStartTime
+        var strokeTimeOffset = strokeStartTime - sampleStartTime
+        
+        var dynamicDataPoints: [PKDrawingDynamicDataModel] = []
+        
+        for (stroke_i, stroke) in drawing.strokes.enumerated() {
+            strokeStartTime = stroke.path.creationDate.timeIntervalSince1970
+            strokeTimeOffset = strokeStartTime - sampleStartTime
 
-    func saveToCloud() {}
+            for point in stroke.path {
+                let timeOffset = point.timeOffset + strokeTimeOffset
+                
+                let newDynamicData = PKDrawingDynamicDataModel(altitude: point.altitude, azimuth: point.azimuth, force: point.force, x: point.location.x, y: point.location.y, timeOffset: timeOffset, strokeNum: stroke_i+1)
+                
+                dynamicDataPoints.append(newDynamicData)
+            }
+        }
+        return dynamicDataPoints
+    }
+    
+    func createSheetsRows(curSample: HandwritingSampleModel, sampleNum: Int) -> [[Any]] {
+        var columns: [[Any]] = []
+        
+        // add header when writing initial data
+        if handwritingSamples.drawings.count == 1 {
+            columns.append(["altitude", "azimuth", "force", "x","y","timeOffset", "strokeNum", "SampleNum", "sampleTarget"])
+        }
+        
+        for point in curSample.drawing {
+            let line = [point.altitude, point.azimuth, point.force, point.x, point.y, point.timeOffset, point.strokeNum, sampleNum, curSample.targetToDraw] as [Any]
+            columns.append(line)
+        }
+        print("\n\nnumber of rows to write:")
+        print(columns.count)
+        return columns
+    }
+
+        
+    func saveDrawing(newTarget: String, newDrawing: PKDrawing) {
+        let newDrawingDynamicData = extractDynamicData(drawing: newDrawing)
+        
+        let handwritingSample = HandwritingSampleModel(
+            targetToDraw: newTarget,
+            drawing: newDrawingDynamicData)
+        
+        handwritingSamples.drawings.append(handwritingSample)
+        
+        let rows = createSheetsRows(curSample: handwritingSample, sampleNum: handwritingSamples.drawings.count)
+        
+        googleSheetsController.writeToGoogleSheets(data: rows, range: username)
+    }
 }
