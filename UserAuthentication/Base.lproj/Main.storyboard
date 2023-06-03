@@ -71,6 +71,27 @@
                                     <action selector="onChangeUsernameBtnClicked:" destination="Kvh-ES-dim" eventType="touchUpInside" id="Swo-rR-NYO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQf-ce-lk5">
+                                <rect key="frame" x="30" y="34" width="173" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Researcher Sign In"/>
+                                <connections>
+                                    <action selector="signIn:" destination="Kvh-ES-dim" eventType="touchUpInside" id="c6s-xi-qE1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="huV-3A-rev">
+                                <rect key="frame" x="704" y="183" width="132" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="fish" translatesAutoresizingMaskIntoConstraints="NO" id="hFx-zA-qMr">
+                                <rect key="frame" x="704" y="192" width="132" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-T3-bXv">
+                                <rect key="frame" x="703" y="166" width="132" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w0f-4S-YeR"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,10 +114,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bird" destination="yrb-T3-bXv" id="cfw-dx-Lsb"/>
                         <outlet property="canvasView" destination="C3g-1L-KZc" id="kE4-Xd-C6Y"/>
+                        <outlet property="cat" destination="huV-3A-rev" id="kTO-hy-UeO"/>
                         <outlet property="changeUsernameBtn" destination="SSq-Uz-XAN" id="i3z-Os-ORE"/>
+                        <outlet property="fish" destination="hFx-zA-qMr" id="ger-jq-DVq"/>
                         <outlet property="namePrompt" destination="ath-ma-hvh" id="syJ-CH-4Nh"/>
                         <outlet property="nameTF" destination="3UO-iz-ZxW" id="usI-0t-oHn"/>
+                        <outlet property="researcherSignIn" destination="RQf-ce-lk5" id="c4N-de-z4Y"/>
                         <outlet property="saveHandwritingBtn" destination="PmB-Se-FYR" id="qnV-JA-pzp"/>
                         <outlet property="targetToWrite" destination="gDe-Bw-62v" id="lor-q0-1uI"/>
                         <outlet property="username" destination="je1-f7-0J8" id="q6W-OY-uNN"/>
@@ -108,6 +133,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bird" width="132" height="135"/>
+        <image name="cat" width="112" height="94"/>
+        <image name="fish" width="69" height="44"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

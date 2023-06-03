@@ -15,6 +15,16 @@ struct HandwritingSamples: Codable {
 
 struct HandwritingSampleModel: Codable {
     var targetToDraw: String = ""
-    var duration: TimeInterval = 1.02
-    var drawing = PKDrawing()
+    var drawing: [PKDrawingDynamicDataModel] = []
+}
+
+struct PKDrawingDynamicDataModel: Codable {
+    var altitude: CGFloat
+    var azimuth: CGFloat
+    var force: CGFloat
+    var x: CGFloat
+    var y: CGFloat
+    var timeOffset: Double
+    var strokeNum: Int
+    
 }
