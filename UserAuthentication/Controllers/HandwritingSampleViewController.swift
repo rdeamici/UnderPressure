@@ -20,12 +20,9 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
     
     @IBOutlet weak var saveHandwritingBtn: UIButton!
     @IBOutlet weak var canvasView: PKCanvasView!
-    @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var targetToWrite: UILabel!
-    @IBOutlet weak var namePrompt: UILabel!
     @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var changeUsernameBtn: UIButton!
-    @IBOutlet weak var researcherSignIn: UIButton!
+    var nameFromSetup: String?
     
     @IBOutlet weak var bird: UIImageView!
     @IBOutlet weak var cat: UIImageView!
@@ -66,109 +63,34 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Handrwiting Sample Screen"
+        
         canvasView.drawingPolicy = .pencilOnly
         canvasView.delegate = self
-        canvasView.isHidden = true
         
-        nameTF.delegate = self
-        nameTF.clearsOnBeginEditing = true
-        username.isHidden = true
-        targetToWrite.isHidden = true
-        changeUsernameBtn.isHidden = true
+        username.text = nameFromSetup
         saveHandwritingBtn.isHidden = true
         
         cat.isHidden = true
         bird.isHidden = true
         fish.isHidden = true
-    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let user = GIDSignIn.sharedInstance.currentUser
-        if user == nil {
-            nameTF.isHidden = true
-            displayNeedToSignInAlert()
-        } else {
-            displaySignInRestoredAlert()
-        }
-    }
-    
-    
-    @IBAction func signIn(_ sender: UIButton) {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-            guard error == nil else { return }
-            
-            guard let signInResult = signInResult else { return }
-            signInResult.user.refreshTokensIfNeeded { user, error in
-                guard error == nil else { return }
-                guard let user = user else { return }
-                            
-                let sheetsScope = "https://www.googleapis.com/auth/spreadsheets"
-                let grantedScopes = user.grantedScopes
-                if grantedScopes == nil || !grantedScopes!.contains(sheetsScope) {
-                    let additionalScopes = [sheetsScope]
-                    guard let currentUser = GIDSignIn.sharedInstance.currentUser else {
-                        return ;  /* Not signed in. */
-                    }
-
-                    currentUser.addScopes(additionalScopes, presenting: self) { signInResult, error in
-                        guard error == nil else { return }
-                        guard let signInResult = signInResult else { return }
-                        print("successfully added spreadsheets scope")
-                        // Check if the user granted access to the scopes you requested.
-                    }
-                }
-            }
-            self.nameTF.isHidden = false
-        }
-    }
-
-    @IBAction func onChangeUsernameBtnClicked(_ sender: Any) {
-        resetUsernameInput()
         
+        googleSheetsController.createNewTab(title: username.text!)
+        handwritingSamplesController.username = username.text!
+        curTarget = username.text!
+        targetToWrite.text = "Please write: \"" + curTarget + "\""
+        repeatCount = REPEAT_COUNT
+        curTargets = targets
+        
+        navigationController?.isNavigationBarHidden = false
     }
 
     func resetUsernameInput() {
-        namePrompt.isHidden = false
-        nameTF.isHidden = false
         username.isHidden = true
         targetToWrite.isHidden = true
         canvasView.isHidden = true
         saveHandwritingBtn.isHidden = true
-        changeUsernameBtn.isHidden = true
-        
-    }
-    
-    // called when a name is added to nameTF textField box
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        handwritingSamplesController.username = textField.text!
-        username.text = textField.text!
-        
-        googleSheetsController.createNewTab(title: textField.text!)
-
-        curTargets = targets
-        curTarget = textField.text!
-        repeatCount = REPEAT_COUNT
-
-        targetToWrite.isHidden = false
-        targetToWrite.text = "Please write the following: \n\"" + curTarget + "\""
-
-        username.isHidden = false
-        nameTF.isHidden = true
-        nameTF.text = ""
-        namePrompt.isHidden = true
-        canvasView.isHidden = false
-        
-        cat.isHidden = true
-        bird.isHidden = true
-        fish.isHidden = true
-        
-        changeUsernameBtn.isHidden = false
-        changeUsernameBtn.setTitle("New Participant", for: .normal)
-        
-        resetForm()
-
-        textField.resignFirstResponder()
-        return true
     }
     
     func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
@@ -189,8 +111,6 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
         canvasView.drawing = PKDrawing()
         canvasView.drawingPolicy = .pencilOnly
         saveHandwritingBtn.isHidden = true
-        saveHandwritingBtn.isEnabled = false
-
 
         if repeatCount == 0 {
             // no more samples to collect
@@ -232,13 +152,6 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
         } else if repeatCount != REPEAT_COUNT {
             displayRepeatTextAlert(count: repeatCount)
         }
-    }
-        
-    func validateForm() {
-        if let name = nameTF.text {
-            saveHandwritingBtn.isEnabled = !(canvasView.drawing.strokes.isEmpty || name.isEmpty)
-        }
-        
     }
 
     @IBAction func saveHandritingSample(_ sender: Any) {

@@ -13,9 +13,11 @@
 		6302A9D62A0D64C3007C1D20 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302A9D52A0D64C3007C1D20 /* QuestionnaireViewController.swift */; };
 		6302A9D82A15B0AC007C1D20 /* GoogleSheetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302A9D72A15B0AC007C1D20 /* GoogleSheetsController.swift */; };
 		6302A9DA2A15B614007C1D20 /* AlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302A9D92A15B614007C1D20 /* AlertsController.swift */; };
+		632FA9E82A2C3C2C0036D48C /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FA9E72A2C3C2C0036D48C /* InferenceViewController.swift */; };
+		632FA9EA2A2D2EA50036D48C /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FA9E92A2D2EA50036D48C /* SetupViewController.swift */; };
 		635BB9552A07154400344D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9542A07154400344D53 /* AppDelegate.swift */; };
 		635BB9572A07154400344D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9562A07154400344D53 /* SceneDelegate.swift */; };
-		635BB9592A07154400344D53 /* HandritingSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9582A07154400344D53 /* HandritingSampleViewController.swift */; };
+		635BB9592A07154400344D53 /* HandwritingSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9582A07154400344D53 /* HandwritingSampleViewController.swift */; };
 		635BB95C2A07154400344D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BB95A2A07154400344D53 /* Main.storyboard */; };
 		635BB95E2A07154600344D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635BB95D2A07154600344D53 /* Assets.xcassets */; };
 		635BB9612A07154600344D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BB95F2A07154600344D53 /* LaunchScreen.storyboard */; };
@@ -51,10 +53,12 @@
 		6302A9D52A0D64C3007C1D20 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
 		6302A9D72A15B0AC007C1D20 /* GoogleSheetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsController.swift; sourceTree = "<group>"; };
 		6302A9D92A15B614007C1D20 /* AlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsController.swift; sourceTree = "<group>"; };
+		632FA9E72A2C3C2C0036D48C /* InferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
+		632FA9E92A2D2EA50036D48C /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		635BB9512A07154400344D53 /* UserAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635BB9542A07154400344D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635BB9562A07154400344D53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		635BB9582A07154400344D53 /* HandritingSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandritingSampleViewController.swift; sourceTree = "<group>"; };
+		635BB9582A07154400344D53 /* HandwritingSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwritingSampleViewController.swift; sourceTree = "<group>"; };
 		635BB95B2A07154400344D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		635BB95D2A07154600344D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635BB9602A07154600344D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,8 +139,10 @@
 		6302A9D22A0B612A007C1D20 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				632FA9E92A2D2EA50036D48C /* SetupViewController.swift */,
 				6302A9D32A0C1B85007C1D20 /* HandwritingSampleModelController.swift */,
-				635BB9582A07154400344D53 /* HandritingSampleViewController.swift */,
+				635BB9582A07154400344D53 /* HandwritingSampleViewController.swift */,
+				632FA9E72A2C3C2C0036D48C /* InferenceViewController.swift */,
 				6302A9D52A0D64C3007C1D20 /* QuestionnaireViewController.swift */,
 				6302A9D72A15B0AC007C1D20 /* GoogleSheetsController.swift */,
 				6302A9D92A15B614007C1D20 /* AlertsController.swift */,
@@ -448,7 +454,9 @@
 				6302A9DA2A15B614007C1D20 /* AlertsController.swift in Sources */,
 				6302A9D62A0D64C3007C1D20 /* QuestionnaireViewController.swift in Sources */,
 				6302A9D82A15B0AC007C1D20 /* GoogleSheetsController.swift in Sources */,
-				635BB9592A07154400344D53 /* HandritingSampleViewController.swift in Sources */,
+				632FA9E82A2C3C2C0036D48C /* InferenceViewController.swift in Sources */,
+				632FA9EA2A2D2EA50036D48C /* SetupViewController.swift in Sources */,
+				635BB9592A07154400344D53 /* HandwritingSampleViewController.swift in Sources */,
 				635BB9552A07154400344D53 /* AppDelegate.swift in Sources */,
 				635BB9572A07154400344D53 /* SceneDelegate.swift in Sources */,
 				6302A9D42A0C1B86007C1D20 /* HandwritingSampleModelController.swift in Sources */,
