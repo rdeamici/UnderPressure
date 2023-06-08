@@ -23,6 +23,7 @@ class HandwritingSampleViewController: UIViewController, UITextFieldDelegate, PK
     @IBOutlet weak var targetToWrite: UILabel!
     @IBOutlet weak var username: UILabel!
     var nameFromSetup: String?
+    @IBOutlet weak var inferenceBarBtn: UIBarButtonItem!
     
     @IBOutlet weak var bird: UIImageView!
     @IBOutlet weak var cat: UIImageView!

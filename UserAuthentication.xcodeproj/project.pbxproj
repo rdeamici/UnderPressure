@@ -24,6 +24,8 @@
 		635BB96C2A07154600344D53 /* UserAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB96B2A07154600344D53 /* UserAuthenticationTests.swift */; };
 		635BB9762A07154600344D53 /* UserAuthenticationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9752A07154600344D53 /* UserAuthenticationUITests.swift */; };
 		635BB9782A07154600344D53 /* UserAuthenticationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BB9772A07154600344D53 /* UserAuthenticationUITestsLaunchTests.swift */; };
+		63AE03B42A324B4D00377CF6 /* HandwritingClaissifier2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 63AE03B32A324B4D00377CF6 /* HandwritingClaissifier2.mlmodel */; };
+		63AE03B62A324DBF00377CF6 /* InferenceMLModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AE03B52A324DBF00377CF6 /* InferenceMLModelController.swift */; };
 		8704CE4CF7D6EB2FB09F13E3 /* Pods_UserAuthentication_UserAuthenticationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A3AC7EDC4432A74A5099F9 /* Pods_UserAuthentication_UserAuthenticationUITests.framework */; };
 		93ED8015EC96C53FA67D4625 /* Pods_UserAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B697A17A97CE4EFB036E4C /* Pods_UserAuthentication.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		635BB9712A07154600344D53 /* UserAuthenticationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserAuthenticationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635BB9752A07154600344D53 /* UserAuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUITests.swift; sourceTree = "<group>"; };
 		635BB9772A07154600344D53 /* UserAuthenticationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		63AE03B32A324B4D00377CF6 /* HandwritingClaissifier2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandwritingClaissifier2.mlmodel; sourceTree = "<group>"; };
+		63AE03B52A324DBF00377CF6 /* InferenceMLModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceMLModelController.swift; sourceTree = "<group>"; };
 		69B697A17A97CE4EFB036E4C /* Pods_UserAuthentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDA863FB2C537F1C22D148A /* Pods-UserAuthenticationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserAuthenticationTests.debug.xcconfig"; path = "Target Support Files/Pods-UserAuthenticationTests/Pods-UserAuthenticationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9094B1DA277DF430E25FA646 /* Pods_UserAuthenticationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserAuthenticationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +150,7 @@
 				6302A9D52A0D64C3007C1D20 /* QuestionnaireViewController.swift */,
 				6302A9D72A15B0AC007C1D20 /* GoogleSheetsController.swift */,
 				6302A9D92A15B614007C1D20 /* AlertsController.swift */,
+				63AE03B52A324DBF00377CF6 /* InferenceMLModelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 		635BB9532A07154400344D53 /* UserAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				63AE03B32A324B4D00377CF6 /* HandwritingClaissifier2.mlmodel */,
 				6302A9D22A0B612A007C1D20 /* Controllers */,
 				6302A9CD2A0B34EE007C1D20 /* Models */,
 				635BB9542A07154400344D53 /* AppDelegate.swift */,
@@ -460,6 +466,8 @@
 				635BB9552A07154400344D53 /* AppDelegate.swift in Sources */,
 				635BB9572A07154400344D53 /* SceneDelegate.swift in Sources */,
 				6302A9D42A0C1B86007C1D20 /* HandwritingSampleModelController.swift in Sources */,
+				63AE03B62A324DBF00377CF6 /* InferenceMLModelController.swift in Sources */,
+				63AE03B42A324B4D00377CF6 /* HandwritingClaissifier2.mlmodel in Sources */,
 				6302A9CF2A0B354E007C1D20 /* HandwritingSampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
